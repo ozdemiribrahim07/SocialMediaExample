@@ -149,7 +149,18 @@ namespace BusinessLayer.Concrete
         }
 
 
+        public IResult DeleteUserById(int userId)
+        {
+            var rulesResult = BusinessRules.Run(CheckIfUserExist(userId));
+            if (rulesResult != null)
+            {
+                return rulesResult;
+            }
 
+            var deletedUser = _userDal.Get(x => x.Id == userId);
+            _userDal.Delete(deletedUser);
+            return new SuccessResult(Messages.User_Deleted);
+        }
 
 
 
@@ -194,9 +205,6 @@ namespace BusinessLayer.Concrete
             return _userDal.GetAll(x => x.Email == email).Any();
         }
 
-
-
-
-
+      
     }
 }

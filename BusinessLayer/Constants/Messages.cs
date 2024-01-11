@@ -37,5 +37,8 @@ namespace BusinessLayer.Constants
         public static string UserAlreadyExist = "Kullanıcı zaten kayıtlı!";
         public static string UserEmailAlreadyExist = "Kullanıcı mail'i zaten kayıtlı!";
         public static string UserEmailNotRight = "Kullanıcı mail'i zaten kayıtlı!";
+
+        public static string AccessDenied = "Erişim Engellendi!";
+
     }
 }

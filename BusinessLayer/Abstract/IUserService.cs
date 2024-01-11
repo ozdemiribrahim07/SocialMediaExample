@@ -15,9 +15,11 @@ namespace BusinessLayer.Abstract
     {
         IDataResult<List<OperationClaim>> GetOperationClaims(User user);
         IDataResult<List<UserDto>> GetAllUsersDto();
+        IResult DeleteUserById(int userId);
         IDataResult<UserDto> GetUserDto(int userId);
         DataResult<User> GetUserByEmail(string email);
         IResult UpdateUserByDto(UserDto userDto);
+        
     }
     
 }

@@ -23,10 +23,6 @@ namespace BusinessLayer.ValidationRules.FluentValidation
                .NotNull()
                .MinimumLength(9)
                .MaximumLength(26);
-
-
-
-
         }
 
     }
